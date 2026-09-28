@@ -39,10 +39,10 @@ const clients = [...originalClients, ...originalClients, ...originalClients];
 
 const Clients = () => {
   return (
-    <section id="clients" className="py-24 bg-slate-900/50">
+    <section id="clients" className="py-24 bg-slate-100/50">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-5xl text-center mb-6">Our Trusted Clients</h2>
-        <p className="text-center text-slate-400 max-w-2xl mx-auto mb-16 text-lg">
+        <h2 className="text-3xl md:text-5xl text-center mb-6 text-slate-900">Our Trusted Clients</h2>
+        <p className="text-center text-slate-600 max-w-2xl mx-auto mb-16 text-lg">
           We are proud to have delivered top-quality branding and signage solutions to some of the most respected institutions and businesses.
         </p>
         
@@ -71,7 +71,7 @@ const Clients = () => {
           >
             {clients.map((client, index) => (
               <SwiperSlide key={index}>
-                <div className="glass-effect rounded-2xl p-8 flex flex-col items-center justify-center text-center group hover:border-primary/50 hover:bg-slate-800/80 transition-all duration-300 hover:-translate-y-1 h-full min-h-[250px]">
+                <div className="glass-effect rounded-2xl p-8 flex flex-col items-center justify-center text-center group hover:border-primary/50 hover:bg-white transition-all duration-300 hover:-translate-y-1 h-full min-h-[250px]">
                   <div className="transform group-hover:scale-110 transition-transform duration-300 flex justify-center items-center h-20 mb-6">
                     {client.logo ? (
                       <img src={client.logo} alt={`${client.name} logo`} className="max-w-full max-h-full object-contain rounded-md" />
@@ -79,7 +79,7 @@ const Clients = () => {
                       client.icon
                     )}
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-2 uppercase tracking-wide">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide">
                     {client.name}
                   </h3>
                   <span className="text-sm text-slate-500">{client.type}</span>

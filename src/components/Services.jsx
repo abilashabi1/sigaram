@@ -65,8 +65,8 @@ const Services = () => {
   return (
     <section id="services" className="py-24">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-5xl text-center mb-6">Our Expertise</h2>
-        <p className="text-center text-slate-400 max-w-2xl mx-auto mb-16 text-lg">
+        <h2 className="text-3xl md:text-5xl text-center mb-6 text-slate-900">Our Expertise</h2>
+        <p className="text-center text-slate-600 max-w-2xl mx-auto mb-16 text-lg">
           We provide a wide range of services from aesthetic vehicle modifications to professional signage solutions.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -78,13 +78,13 @@ const Services = () => {
               {/* Image Container */}
               <div className="h-48 overflow-hidden relative">
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10"></div>
                 <img 
                   src={service.image} 
                   alt={service.title} 
                   className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 right-4 z-20 w-10 h-10 bg-slate-900/80 backdrop-blur-md rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                <div className="absolute top-4 right-4 z-20 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
                   {service.icon}
                 </div>
               </div>
@@ -92,10 +92,10 @@ const Services = () => {
               {/* Text Container */}
               <div className="p-6 flex-1 flex flex-col">
                 {/* Hover effect light streak */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none z-0"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-slate-900/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none z-0"></div>
                 
-                <h3 className="text-xl mb-3 z-10 relative text-white">{service.title}</h3>
-                <p className="text-slate-400 leading-relaxed z-10 relative flex-1">{service.description}</p>
+                <h3 className="text-xl mb-3 z-10 relative text-slate-900 font-semibold">{service.title}</h3>
+                <p className="text-slate-600 leading-relaxed z-10 relative flex-1">{service.description}</p>
               </div>
             </div>
           ))}
