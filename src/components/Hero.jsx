@@ -3,12 +3,12 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
+    <section id="home" className="min-h-[70vh] md:min-h-screen flex items-center relative overflow-hidden pt-32 pb-16 md:pt-20 md:pb-0">
       {/* Background gradients */}
       <div className="absolute inset-0 z-[-1] bg-[radial-gradient(circle_at_80%_20%,rgba(249,115,22,0.15)_0%,transparent_50%),radial-gradient(circle_at_20%_80%,rgba(226,232,240,0.8)_0%,transparent_50%)]"></div>
       
       <div className="container-custom flex justify-center items-center">
-        <div className="flex flex-col gap-6 animate-slide-up text-center max-w-3xl">
+        <div className="flex flex-col gap-4 md:gap-6 animate-slide-up text-center max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-7xl bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent pb-2 drop-shadow-sm">
             Premium Styling & Modifications
           </h1>
