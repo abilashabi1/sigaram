@@ -9,55 +9,63 @@ import {
   Image as ImageIcon, 
   Megaphone
 } from 'lucide-react';
+import imgAutomobileStickers from '../assets/Services/Automobile Stickers.png';
+import imgBikeModification from '../assets/Services/bikemodification.png';
+import imgSunFilmPpf from '../assets/Services/sunfilmppf.png';
+import imgNumberPlates from '../assets/Services/numberplates.png';
+import imgLaserAcrylic from '../assets/Services/LaserAcrylic Cutting.png';
+import imgNameBoards from '../assets/Services/Nameboards.png';
+import imgPhotoFrames from '../assets/Services/PhotoFrames.png';
+import imgFlexLighting from '../assets/Services/FlexLighting Boards.png';
 
 const services = [
   {
     title: "Automobile Stickers",
     description: "Premium custom stickers for bikes, cars, vans, trucks, and buses.",
     icon: <Sticker className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1611016186353-9af58c69a533?w=800&auto=format&fit=crop&q=80"
+    image: imgAutomobileStickers
   },
   {
     title: "Bike Modification",
     description: "Complete bike styling and modification services tailored to your taste.",
     icon: <Bike className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800&auto=format&fit=crop&q=80"
+    image: imgBikeModification
   },
   {
     title: "Sun Film & PPF",
     description: "High-quality sun control films and Paint Protection Films for all vehicles.",
     icon: <ShieldCheck className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop&q=80"
+    image: imgSunFilmPpf
   },
   {
     title: "Number Plates",
     description: "All types of custom and standard number plates made to perfection.",
     icon: <CreditCard className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop&q=80"
+    image: imgNumberPlates
   },
   {
     title: "Laser & Acrylic Cutting",
     description: "Precision laser cutting and custom acrylic boards for diverse needs.",
     icon: <Crosshair className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80"
+    image: imgLaserAcrylic
   },
   {
-    title: "Sign Boards",
-    description: "Durable and attractive sign boards, including 3D and LED options.",
+    title: "Name Boards",
+    description: "Durable and attractive name boards, including 3D and LED options.",
     icon: <Signpost className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80"
+    image: imgNameBoards
   },
   {
     title: "Photo Frames",
     description: "Beautifully crafted photo frames available in all sizes and designs.",
     icon: <ImageIcon className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&auto=format&fit=crop&q=80"
+    image: imgPhotoFrames
   },
   {
     title: "Flex & Lighting Boards",
     description: "Eye-catching flex banners and illuminated boards for your business.",
     icon: <Megaphone className="w-6 h-6" />,
-    image: "https://images.unsplash.com/photo-1582046830509-3286bbfb2649?w=800&auto=format&fit=crop&q=80"
+    image: imgFlexLighting
   }
 ];
 
@@ -76,13 +84,13 @@ const Services = () => {
               className="glass-effect rounded-2xl overflow-hidden relative group hover:-translate-y-2 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] hover:border-primary/30 transition-all duration-500 flex flex-col h-full"
             >
               {/* Image Container */}
-              <div className="h-48 overflow-hidden relative">
+              <div className="h-48 overflow-hidden relative bg-white/50">
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10"></div>
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover block transform origin-bottom transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 z-20 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300 shadow-sm">
                   {service.icon}
