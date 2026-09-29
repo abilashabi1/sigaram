@@ -28,7 +28,7 @@ const originalClients = [
     type: "Education"
   },
   {
-    name: "VS Bricks",
+    name: "VS Concrete Readymix",
     icon: <Factory className="w-12 h-12 mb-4 text-primary" />,
     type: "Industrial"
   }

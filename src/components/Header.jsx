@@ -20,6 +20,7 @@ const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex gap-8">
             <li><a href="#home" className="text-slate-700 font-medium hover:text-primary transition-colors">Home</a></li>
+            <li><a href="#about" className="text-slate-700 font-medium hover:text-primary transition-colors">About</a></li>
             <li><a href="#services" className="text-slate-700 font-medium hover:text-primary transition-colors">Services</a></li>
             <li><a href="#clients" className="text-slate-700 font-medium hover:text-primary transition-colors">Clients</a></li>
             <li><a href="#location" className="text-slate-700 font-medium hover:text-primary transition-colors">Location</a></li>

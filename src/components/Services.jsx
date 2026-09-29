@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Sticker, 
   Bike, 
@@ -7,7 +7,8 @@ import {
   Crosshair, 
   Signpost, 
   Image as ImageIcon, 
-  Megaphone
+  Megaphone,
+  X
 } from 'lucide-react';
 import imgAutomobileStickers from '../assets/Services/Automobile Stickers.png';
 import imgBikeModification from '../assets/Services/bikemodification.png';
@@ -70,8 +71,12 @@ const services = [
 ];
 
 const Services = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
+  const closeModal = () => setSelectedService(null);
+
   return (
-    <section id="services" className="py-24">
+    <section id="services" className="py-24 relative">
       <div className="container-custom">
         <h2 className="text-3xl md:text-5xl text-center mb-6 text-slate-900">Our Expertise</h2>
         <p className="text-center text-slate-600 max-w-2xl mx-auto mb-16 text-lg">
@@ -81,7 +86,8 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="glass-effect rounded-2xl overflow-hidden relative group hover:-translate-y-2 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] hover:border-primary/30 transition-all duration-500 flex flex-col h-full"
+              onClick={() => setSelectedService(service)}
+              className="glass-effect rounded-2xl overflow-hidden relative group hover:-translate-y-2 hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] hover:border-primary/30 transition-all duration-500 flex flex-col h-full cursor-pointer"
             >
               {/* Image Container */}
               <div className="h-48 overflow-hidden relative bg-white/50">
@@ -109,6 +115,54 @@ const Services = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal Popup */}
+      {selectedService && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300"
+          onClick={closeModal}
+        >
+          <div 
+            className="bg-white rounded-2xl overflow-hidden w-full max-w-3xl flex flex-col md:flex-row shadow-2xl transform transition-all animate-fade-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Image */}
+            <div className="md:w-1/2 h-64 md:h-auto relative bg-slate-100">
+              <img 
+                src={selectedService.image} 
+                alt={selectedService.title} 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-4 left-4 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-primary shadow-sm">
+                {selectedService.icon}
+              </div>
+            </div>
+            
+            {/* Modal Content */}
+            <div className="md:w-1/2 p-8 relative flex flex-col justify-center">
+              <button 
+                onClick={closeModal}
+                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-900 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              
+              <h3 className="text-3xl text-slate-900 font-bold mb-4">{selectedService.title}</h3>
+              <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                {selectedService.description}
+              </p>
+              
+              <a 
+                href="#location" 
+                onClick={closeModal}
+                className="btn btn-primary self-start"
+              >
+                Book Service
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
