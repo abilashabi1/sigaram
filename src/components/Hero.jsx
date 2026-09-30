@@ -1,18 +1,30 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import heroBg from '../assets/hero.png';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-[70vh] md:min-h-screen flex items-center relative overflow-hidden pt-32 pb-16 md:pt-20 md:pb-0">
-      {/* Background gradients */}
-      <div className="absolute inset-0 z-[-1] bg-[radial-gradient(circle_at_80%_20%,rgba(249,115,22,0.15)_0%,transparent_50%),radial-gradient(circle_at_20%_80%,rgba(226,232,240,0.8)_0%,transparent_50%)]"></div>
+    <section 
+      id="home" 
+      className="min-h-[70vh] md:min-h-screen flex items-center relative overflow-hidden pt-32 pb-16 md:pt-20 md:pb-0"
+      style={{
+        backgroundImage: `url(${heroBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* Background overlay */}
+      <div className="absolute inset-0 z-[0] bg-slate-900/70"></div>
       
-      <div className="container-custom flex justify-center items-center">
-        <div className="flex flex-col gap-4 md:gap-6 animate-slide-up text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent pb-2 drop-shadow-sm">
-            Premium Styling & Modifications
+      <div className="container-custom flex justify-center items-center relative z-10">
+        <div className="flex flex-col gap-4 md:gap-6 animate-slide-up text-center max-w-4xl">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold pb-2 tracking-tight text-white drop-shadow-md">
+            Premium <br className="hidden md:block" />
+            <span className="bg-gradient-to-r from-yellow-300 via-orange-500 to-red-500 bg-clip-text text-transparent drop-shadow-lg">
+              Styling & Modifications
+            </span>
           </h1>
-          <p className="text-slate-600 text-lg md:text-xl">
+          <p className="text-slate-200 text-lg md:text-xl font-medium drop-shadow-md max-w-2xl mx-auto">
             Your one-stop destination for automobile stickers, bike modifications, 
             sun films, PPF, customized number plates, and state-of-the-art sign boards.
           </p>
@@ -20,7 +32,7 @@ const Hero = () => {
             <a href="#services" className="btn btn-primary">
               Explore Services <ArrowRight size={20} />
             </a>
-            <a href="#location" className="btn btn-outline">
+            <a href="#location" className="btn btn-outline bg-white/10 text-white border-white/20 hover:bg-white/20 hover:border-white/30 backdrop-blur-sm">
               Visit Us
             </a>
           </div>
