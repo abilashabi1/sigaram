@@ -37,7 +37,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
           
           <div className="lg:w-1/2 relative flex justify-center">
             <div className="glass-effect p-3 rounded-3xl relative z-10 max-w-[340px] w-full">
