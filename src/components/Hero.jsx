@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import heroBg from '../assets/hero.png';
 import heroMobBg from '../assets/heromob.png';
+import heroTabBg from '../assets/herotab.png';
 
 const Hero = () => {
   return (
@@ -11,9 +12,19 @@ const Hero = () => {
     >
       {/* Desktop Background */}
       <div 
-        className="absolute inset-0 z-[-1] hidden md:block"
+        className="absolute inset-0 z-[-1] hidden lg:block"
         style={{
           backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+
+      {/* Tablet Background */}
+      <div 
+        className="absolute inset-0 z-[-1] hidden md:block lg:hidden"
+        style={{
+          backgroundImage: `url(${heroTabBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
