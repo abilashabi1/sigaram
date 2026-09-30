@@ -1,18 +1,34 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import heroBg from '../assets/hero.png';
+import heroMobBg from '../assets/heromob.png';
 
 const Hero = () => {
   return (
     <section 
       id="home" 
       className="min-h-[70vh] md:min-h-screen flex items-center relative overflow-hidden pt-32 pb-16 md:pt-20 md:pb-0"
-      style={{
-        backgroundImage: `url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
     >
+      {/* Desktop Background */}
+      <div 
+        className="absolute inset-0 z-[-1] hidden md:block"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+
+      {/* Mobile Background */}
+      <div 
+        className="absolute inset-0 z-[-1] block md:hidden"
+        style={{
+          backgroundImage: `url(${heroMobBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+
       {/* Background overlay */}
       <div className="absolute inset-0 z-[0] bg-slate-900/70"></div>
       
