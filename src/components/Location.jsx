@@ -66,7 +66,7 @@ const Location = () => {
           
           <div className="rounded-2xl overflow-hidden h-[400px] border border-slate-200 w-full shadow-sm">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15654.55182962382!2d79.8055456!3d11.0657921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a552599426f8eb7%3A0x6e8e88863f6a27e8!2sSigaram%20Stickers!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.983988582967!2d78.18374947503038!3d9.935293290167384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5722456bd45%3A0x77b00b6b333d9adf!2sSigaram%20Stickers!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
               className="w-full h-full border-0"
               allowFullScreen="" 
               loading="lazy" 
